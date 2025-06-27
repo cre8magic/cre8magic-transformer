@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OqtaneTemplateGenerator.App", "OqtaneTemplateGenerator.App\OqtaneTemplateGenerator.App.csproj", "{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OqtaneTemplateGenerator.Tests", "OqtaneTemplateGenerator.Tests\OqtaneTemplateGenerator.Tests.csproj", "{A505AE39-8747-A4AA-F34D-39D076B13567}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		OqtaneTemplateGenerator.App\template-generator.config.json = OqtaneTemplateGenerator.App\template-generator.config.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{66A21EB8-5D93-77DD-6F45-7C4D31112FAB}"
+	ProjectSection(SolutionItems) = preProject
+		publish\OqtaneTemplateGenerator.exe = publish\OqtaneTemplateGenerator.exe
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A505AE39-8747-A4AA-F34D-39D076B13567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A505AE39-8747-A4AA-F34D-39D076B13567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A505AE39-8747-A4AA-F34D-39D076B13567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A505AE39-8747-A4AA-F34D-39D076B13567}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66A21EB8-5D93-77DD-6F45-7C4D31112FAB} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14B5E3A1-F17D-43E6-BF74-0918F3A0C899}
+	EndGlobalSection
+EndGlobal
