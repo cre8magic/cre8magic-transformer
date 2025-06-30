@@ -1,6 +1,5 @@
 {
-  "sourcePath": "A:\\2shine-oqtane\\cre8magic-oqtane-theme-basic",
-  "destinationPath": "A:\\2shine-oqtane\\oqtane.framework\\Oqtane.Server\\wwwroot\\Themes\\Templates",
+  "destinationPath": "..\\..\\2Templates",
   "template": "cre8magic",
   "source": [
     {
@@ -14,7 +13,8 @@
         "Client/",
         "Package/",
         ".gitignore",
-        "**/*.DotSettings"
+        "**/*.DotSettings",
+        "template-generator.config.json"
       ]
     },
     {
