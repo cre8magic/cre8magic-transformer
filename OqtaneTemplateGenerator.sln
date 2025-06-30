@@ -17,6 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{66A2
 		publish\OqtaneTemplateGenerator.exe = publish\OqtaneTemplateGenerator.exe
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{549B9CE9-6F60-CA36-A749-84BB87DB53D3}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\template-generator-test1.config.json = Tests\template-generator-test1.config.json
+		Tests\template-generator-test2.config.json = Tests\template-generator-test2.config.json
+		Tests\template-generator-test3.config.json = Tests\template-generator-test3.config.json
+		Tests\template-generator-test4.config.json = Tests\template-generator-test4.config.json
+		Tests\test.bat = Tests\test.bat
+		Tests\test1.bat = Tests\test1.bat
+		Tests\test2.bat = Tests\test2.bat
+		Tests\test3.bat = Tests\test3.bat
+		Tests\test4.bat = Tests\test4.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +50,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{66A21EB8-5D93-77DD-6F45-7C4D31112FAB} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{549B9CE9-6F60-CA36-A749-84BB87DB53D3} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14B5E3A1-F17D-43E6-BF74-0918F3A0C899}

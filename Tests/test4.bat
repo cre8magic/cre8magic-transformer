@@ -1,0 +1,1 @@
+"..\publish\OqtaneTemplateGenerator.exe" --config "template-generator-test4.config.json"
