@@ -1,1 +1,1 @@
-"..\publish\OqtaneTemplateGenerator.exe" --config "template-generator-test3.config.json" --source "1Themes\cre8magic-oqtane-theme-basic"
+"..\publish\OqtaneTemplateGenerator.exe" --config "template-generator-test3.config.json" --source "1Themes\oqtane-theme-basic"

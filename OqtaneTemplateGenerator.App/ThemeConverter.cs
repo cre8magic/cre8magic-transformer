@@ -1,7 +1,6 @@
-using System.Text;
-using System.Text.Json;
 using Microsoft.Extensions.FileSystemGlobbing;
 using Microsoft.Extensions.FileSystemGlobbing.Abstractions;
+using System.Text;
 using ToSic.Cre8magic.Oqtane.TemplateGenerator.Models;
 
 // ReSharper disable CheckNamespace
@@ -12,48 +11,44 @@ namespace ToSic.Cre8magic.Oqtane.TemplateGenerator;
 /// </summary>
 public class ThemeConverter
 {
-    private readonly string _sourcePath;
-    private readonly string _destinationPath;
     private readonly TemplateGeneratorConfig _config;
 
-    public ThemeConverter(string sourcePath, string destinationPath, string configPath)
+    public ThemeConverter(TemplateGeneratorConfig config)
     {
-        _sourcePath = Path.GetFullPath(sourcePath);
-        _destinationPath = Path.GetFullPath(destinationPath);
-
-        Console.WriteLine($"\nLoading configuration from: {configPath}");
-        var configJson = File.ReadAllText(configPath);
-        _config = JsonSerializer.Deserialize(configJson, TemplateGeneratorConfigJsonContext.Default.TemplateGeneratorConfig)
-                  ?? throw new InvalidOperationException("Failed to parse configuration file.");
+        _config = config ?? throw new ArgumentNullException(nameof(config));
 
         Console.WriteLine("Configuration loaded successfully.");
-        Console.WriteLine($" - Source: {_sourcePath}");
-        Console.WriteLine($" - Destination: {_destinationPath}");
-        Console.WriteLine($" - Template: {_config.Template}");
+        Console.WriteLine($" - Source: {_config.SourcePath}");
+        Console.WriteLine($" - Destination: {_config.DestinationPath}");
     }
 
     public void Process()
     {
-        if (Directory.Exists(_destinationPath))
-        {
-            Console.WriteLine("Destination directory exists. Cleaning it up...");
-            try
-            {
-                Directory.Delete(_destinationPath, true);
-            }
-            catch (Exception ex)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"\nError: Could not clean '{_destinationPath}' destination directory: {ex.Message}");
-                Console.ResetColor();
-            }
-        }
-        Directory.CreateDirectory(_destinationPath);
+        CleanDestinationDirectory();
+        Directory.CreateDirectory(_config.DestinationPath!);
 
         Console.WriteLine("\nStarting conversion...");
 
         // Step 1: Source selection and copy
-        ProcessSource(_sourcePath, _destinationPath);
+        ProcessSource(_config.SourcePath!, _config.DestinationPath!);
+    }
+
+    private void CleanDestinationDirectory()
+    {
+        if (Directory.Exists(_config.DestinationPath) && File.Exists(Path.Combine(_config.DestinationPath, Constants.TemplateJson)))
+        {
+            Console.WriteLine("Destination directory exists. Cleaning it up...");
+            try
+            {
+                Directory.Delete(_config.DestinationPath, true);
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\nError: Could not clean '{_config.DestinationPath}' destination directory: {ex.Message}");
+                Console.ResetColor();
+            }
+        }
     }
 
     private void ProcessSource(string sourceDir, string destDir)
@@ -75,7 +70,7 @@ public class ThemeConverter
         // Process files and create directories as needed
         foreach (var file in includedFiles)
         {
-            var relFile = Path.GetRelativePath(_sourcePath, file);
+            var relFile = Path.GetRelativePath(_config.SourcePath!, file);
             var destFile = Path.Combine(destDir, ApplyRenameRules(relFile));
 
             // Ensure the directory structure exists for the renamed file
@@ -96,13 +91,15 @@ public class ThemeConverter
             if (content != processedContent)
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine($"[PROCESS]      {Path.GetRelativePath(_sourcePath, sourceFile)}");
+                Console.WriteLine($"[CHANGED]      {Path.GetRelativePath(_config.SourcePath!, sourceFile)}");
+                LogRename(sourceFile, destFile);
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine($"[NO CHANGE]    {Path.GetRelativePath(_sourcePath, sourceFile)}");
+                Console.WriteLine($"[UNCHANGED]    {Path.GetRelativePath(_config.SourcePath!, sourceFile)}");
+                LogRename(sourceFile, destFile);
                 Console.ResetColor();
             }
             File.WriteAllText(destFile, processedContent, Encoding.UTF8);
@@ -110,9 +107,20 @@ public class ThemeConverter
         else
         {
             File.Copy(sourceFile, destFile, true);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"[COPY]         {Path.GetRelativePath(_sourcePath, sourceFile)}");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine($"[COPY]         {Path.GetRelativePath(_config.SourcePath!, sourceFile)}");
+            LogRename(sourceFile, destFile);
             Console.ResetColor();
+        }
+    }
+
+    private void LogRename(string sourceFile, string destFile)
+    {
+        var relativeSourcePath = Path.GetRelativePath(_config.SourcePath!, sourceFile);
+        var relativeDestPath = Path.GetRelativePath(_config.DestinationPath!, destFile);
+        if (!relativeSourcePath.Equals(relativeDestPath, StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine($"            -> {relativeDestPath}");
         }
     }
 

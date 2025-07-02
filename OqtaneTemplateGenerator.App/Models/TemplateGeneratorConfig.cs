@@ -14,9 +14,6 @@ public class TemplateGeneratorConfig
     [JsonPropertyName("destinationPath")]
     public string? DestinationPath { get; set; }
 
-    [JsonPropertyName("template")]
-    public string? Template { get; set; }
-
     [JsonPropertyName("source")]
     public List<TemplateGeneratorConfigRule> Source { get; set; } = new();
 

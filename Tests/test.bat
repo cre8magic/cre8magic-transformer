@@ -1,3 +1,3 @@
-cd "1Themes\cre8magic-oqtane-theme-basic"
-"..\..\..\publish\OqtaneTemplateGenerator.exe"
+cd "1Themes\oqtane-theme-basic"
+"..\..\..\publish\OqtaneTemplateGenerator.exe" --source "./"
 cd "..\.."

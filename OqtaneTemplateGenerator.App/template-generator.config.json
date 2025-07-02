@@ -1,11 +1,15 @@
 {
-  "destinationPath": "..\\..\\2Templates",
-  "template": "cre8magic",
+  // The path where generated templates will be placed
+  "destinationPath": "..\\..\\..\\..\\Tests\\2Templates\\cre8magic",
+
+  // Source file selection rules
   "source": [
     {
+      // Include all files
       "include": [
         "**/*.*"
       ],
+      // Exclude version control, IDE, and specific folders/files
       "exclude": [
         ".git/",
         ".github/",
@@ -18,9 +22,11 @@
       ]
     },
     {
+      // Include all files in the Client folder
       "include": [
         "Client/**/*.*"
       ],
+      // Exclude build artifacts and settings
       "exclude": [
         "**/bin/",
         "**/node_modules/",
@@ -30,9 +36,11 @@
       ]
     },
     {
+      // Include all files in the Package folder
       "include": [
         "Package/**/*.*"
       ],
+      // Exclude build artifacts and package files
       "exclude": [
         "**/bin/",
         "**/obj/",
@@ -40,18 +48,25 @@
       ]
     }
   ],
+
+  // File renaming rules
   "rename": [
     {
+      // Apply to all files
       "include": [
         "**/*.*"
       ],
+      // Replace namespace and theme placeholders
       "replace": {
         "ToSic.Cre8magic.Theme.Basic": "[Owner].Theme.[Theme]"
       }
     }
   ],
+
+  // Content processing and token replacement rules
   "process": [
     {
+      // File types to process for replacements
       "include": [
         "**/*.sln",
         "**/*.csproj",
@@ -77,14 +92,15 @@
         "**/*.ps1",
         "**/*.sh"
       ],
+      // Exclude specific documentation files
       "exclude": [
         "**/styles/readme.md"
       ],
+      // Replace tokens with template variables
       "replace": {
         "ToSic.Cre8magic.Theme.Basic": "[Owner].Theme.[Theme]",
         "ToSic": "[Owner]",
         "Basic": "[Theme]",
-        "6.1.2": "[FrameworkVersion]",
         "6.1.3": "[FrameworkVersion]"
       }
     }
