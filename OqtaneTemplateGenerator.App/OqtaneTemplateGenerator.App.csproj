@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>OqtaneTemplateGenerator</AssemblyName>
-    <ApplicationIcon>OqtaneTemplateGenerator.ico</ApplicationIcon>
+    <ApplicationIcon>assets\logo-400.ico</ApplicationIcon>
     <Version>0.0.2</Version>
     <Product>Oqtane Template Generator</Product>
     <Company>2sic internet solutions GmbH, Switzerland</Company>
@@ -34,13 +34,9 @@
     <TrimmerDefaultAction>link</TrimmerDefaultAction>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="OqtaneTemplateGenerator.ico" />
+    <Content Include="assets\logo-400.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\docs\icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -48,8 +44,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="9.0.6" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\" />
   </ItemGroup>
 </Project>
