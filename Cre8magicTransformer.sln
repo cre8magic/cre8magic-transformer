@@ -16,6 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{66A21EB8-5D93-77DD-6F45-7C4D31112FAB}"
+	ProjectSection(SolutionItems) = preProject
+		publish\cre8magicTransformer.exe = publish\cre8magicTransformer.exe
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{549B9CE9-6F60-CA36-A749-84BB87DB53D3}"
 	ProjectSection(SolutionItems) = preProject
