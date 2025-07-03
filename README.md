@@ -1,10 +1,15 @@
 ﻿
+# cre8magic ♾️ Transformer 
+
 <img src="./OqtaneTemplateGenerator.App/assets/logo-400.png" alt="Oqtane Template Generator logo" width="200" align="right"/>
 
-# cre8magic ♾️ <br> Oqtane Template Generator
+> Oqtane Template / Module generator
+> and Template to Theme / Module converter
 
 This is a template generator for Oqtane, designed to help you create new templates quickly and easily.
 
 It is meant to convert existing Oqtane Themes (and possibly Modules) into Oqtane Templates.
 
-See [docs](https://cre8magic.blazor-cms.org/magic-tools/template-generator/index.html)
+You can also use it to reverse the process, converting Oqtane Templates back into Themes or Modules.
+
+See [docs](https://cre8magic.blazor-cms.org/magic-tools/cre8magic-transformer/)
