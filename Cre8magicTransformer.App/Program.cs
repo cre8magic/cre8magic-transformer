@@ -1,5 +1,5 @@
-// ReSharper disable CheckNamespace
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator;
+﻿// ReSharper disable CheckNamespace
+namespace ToSic.Cre8magic.Oqtane.Transformer;
 
 /// <summary>
 /// Main application class.

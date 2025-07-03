@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OqtaneTemplateGenerator.App\OqtaneTemplateGenerator.App.csproj" />
+    <ProjectReference Include="..\Cre8magicTransformer.App\Cre8magicTransformer.App.csproj" />
   </ItemGroup>
 
 </Project>

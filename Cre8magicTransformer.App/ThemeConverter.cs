@@ -1,19 +1,19 @@
-using Microsoft.Extensions.FileSystemGlobbing;
+﻿using Microsoft.Extensions.FileSystemGlobbing;
 using Microsoft.Extensions.FileSystemGlobbing.Abstractions;
 using System.Text;
-using ToSic.Cre8magic.Oqtane.TemplateGenerator.Models;
+using ToSic.Cre8magic.Oqtane.Transformer.Models;
 
 // ReSharper disable CheckNamespace
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator;
+namespace ToSic.Cre8magic.Oqtane.Transformer;
 
 /// <summary>
 /// Handles the theme conversion logic.
 /// </summary>
 public class ThemeConverter
 {
-    private readonly TemplateGeneratorConfig _config;
+    private readonly TransformerConfig _config;
 
-    public ThemeConverter(TemplateGeneratorConfig config)
+    public ThemeConverter(TransformerConfig config)
     {
         _config = config ?? throw new ArgumentNullException(nameof(config));
 

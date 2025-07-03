@@ -1,13 +1,13 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
-using ToSic.Cre8magic.Oqtane.TemplateGenerator.Models;
+using ToSic.Cre8magic.Oqtane.Transformer.Models;
 
 // ReSharper disable CheckNamespace
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator;
+namespace ToSic.Cre8magic.Oqtane.Transformer;
 
 public partial class Program
 {
-    private static TemplateGeneratorConfig GetConfiguration(string? sourcePath, string? destinationPath, string? configPath)
+    private static TransformerConfig GetConfiguration(string? sourcePath, string? destinationPath, string? configPath)
     {
         configPath = GetConfigPath(sourcePath, configPath);
 
@@ -21,11 +21,11 @@ public partial class Program
         }
 
         // Load config for possible default paths
-        TemplateGeneratorConfig? config = null;
+        TransformerConfig? config = null;
         try
         {
             var configJson = File.ReadAllText(configPath);
-            config = JsonSerializer.Deserialize(configJson, TemplateGeneratorConfigJsonContext.Default.TemplateGeneratorConfig);
+            config = JsonSerializer.Deserialize(configJson, TransformerConfigJsonContext.Default.TransformerConfig);
         }
         catch (Exception ex)
         {
@@ -52,10 +52,10 @@ public partial class Program
 
     private static string? GetConfigPath(string? sourcePath, string? configPath)
         => ConvertToFullPath(string.IsNullOrEmpty(configPath)
-            ? Path.Combine(sourcePath ?? string.Empty, Constants.TemplateGeneratorConfigJson)
+            ? Path.Combine(sourcePath ?? string.Empty, Constants.TransformerConfigJson)
             : configPath);
 
-    private static TemplateGeneratorConfig PrepareSourceAndDestinationPaths(TemplateGeneratorConfig config,
+    private static TransformerConfig PrepareSourceAndDestinationPaths(TransformerConfig config,
         string? sourcePath,
         string? destinationPath)
     {
@@ -66,7 +66,7 @@ public partial class Program
         return config;
     }
 
-    private static void ConfigValidation(TemplateGeneratorConfig config)
+    private static void ConfigValidation(TransformerConfig config)
     {
         if (string.IsNullOrEmpty(config.SourcePath))
         {
@@ -105,7 +105,7 @@ public partial class Program
 
     [RequiresUnreferencedCode("Calls System.Text.Json.JsonSerializer.Serialize<TValue>(TValue, JsonSerializerOptions)")]
     [RequiresDynamicCode("Calls System.Text.Json.JsonSerializer.Serialize<TValue>(TValue, JsonSerializerOptions)")]
-    private static void CreateDefaultTemplateJson(TemplateGeneratorConfig config)
+    private static void CreateDefaultTemplateJson(TransformerConfig config)
     {
         Console.WriteLine($"Creating a default '{Constants.TemplateJson}' file in '{config.SourcePath}'...");
         var defaultJson = JsonSerializer.Serialize(

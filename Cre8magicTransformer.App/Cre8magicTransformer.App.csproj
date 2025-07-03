@@ -1,17 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>OqtaneTemplateGenerator</AssemblyName>
+    <AssemblyName>cre8magicTransformer</AssemblyName>
     <ApplicationIcon>assets\logo-400.ico</ApplicationIcon>
-    <Version>0.0.2</Version>
-    <Product>Oqtane Template Generator</Product>
+    <Version>0.1.0</Version>
+    <Product>cre8magicTransformer</Product>
     <Company>2sic internet solutions GmbH, Switzerland</Company>
     <CopyRight>Copyright MIT © 2sic 2025</CopyRight>
-    <Title>Oqtane Template Generator</Title>
-    <Description>Oqatne theme template generator</Description>
+    <Title>cre8magicTransformer</Title>
+    <Description>Oqatne template generator</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishDir>publish</PublishDir>
     <LangVersion>preview</LangVersion>
@@ -19,7 +19,7 @@
     <PublishAot>True</PublishAot>
     <PackageProjectUrl>https://cre8magic.blazor-cms.org/magic-tools/template-generator/index.html</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/cre8magic/oqtane-template-generator</RepositoryUrl>
+    <RepositoryUrl>https://github.com/cre8magic/cre8magic-transformer</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackAsTool>True</PackAsTool>
   </PropertyGroup>

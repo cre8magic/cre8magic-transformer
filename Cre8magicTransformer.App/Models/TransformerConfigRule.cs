@@ -1,12 +1,12 @@
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 // ReSharper disable CheckNamespace
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator.Models;
+namespace ToSic.Cre8magic.Oqtane.Transformer.Models;
 
 /// <summary>
 /// Represents a rule for source, rename, or process configuration.
 /// </summary>
-public class TemplateGeneratorConfigRule
+public class TransformerConfigRule
 {
     [JsonPropertyName("include")]
     public List<string> Include { get; set; } = new();

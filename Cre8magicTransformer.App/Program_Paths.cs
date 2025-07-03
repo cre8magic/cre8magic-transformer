@@ -1,7 +1,5 @@
-using ToSic.Cre8magic.Oqtane.TemplateGenerator.Models;
-
-// ReSharper disable CheckNamespace
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator;
+﻿// ReSharper disable CheckNamespace
+namespace ToSic.Cre8magic.Oqtane.Transformer;
 
 public partial class Program
 {

@@ -363,5 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Test themes
-Tests/1Themes
-Tests/2Templates
+/Tests/1Themes
+/Tests/2Templates
+/Tests/3Package

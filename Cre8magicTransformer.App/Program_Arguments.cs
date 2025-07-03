@@ -1,7 +1,7 @@
-// ReSharper disable CheckNamespace
+﻿// ReSharper disable CheckNamespace
 using System.Reflection;
 
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator;
+namespace ToSic.Cre8magic.Oqtane.Transformer;
 
 public partial class Program
 {
@@ -73,12 +73,12 @@ public partial class Program
     {
         Console.WriteLine("\nConverts an Oqtane theme into a reusable template.");
         Console.WriteLine("\nUSAGE:");
-        Console.WriteLine("  OqtaneTemplateGenerator --source <path> [--destination <path>] [--config <path>]");
+        Console.WriteLine("  cre8magicTransformer --source <path> [--destination <path>] [--config <path>]");
         Console.WriteLine("\nARGUMENTS:");
         Console.WriteLine("  -s, --source <path>       Path to the source Oqtane theme directory.");
         Console.WriteLine("  -d, --destination <path>  (Optional) Path to the output directory for the template.");
         Console.WriteLine("  -c, --config <path>       (Optional) Path to the JSON configuration file.");
-        Console.WriteLine("                            Defaults to 'template-generator.config.json' in source directory.");
+        Console.WriteLine("                            Defaults to 'cre8magic-transformer.config.json' in source directory.");
         Console.WriteLine("  -h, --help                Displays this help information.");
         //Console.WriteLine("  -v, --verbose             Verbose logging.");
     }

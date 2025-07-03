@@ -3,22 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OqtaneTemplateGenerator.App", "OqtaneTemplateGenerator.App\OqtaneTemplateGenerator.App.csproj", "{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cre8magicTransformer.App", "Cre8magicTransformer.App\Cre8magicTransformer.App.csproj", "{8DEF48C4-76BD-C58B-1F7F-23DE409E8801}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OqtaneTemplateGenerator.Tests", "OqtaneTemplateGenerator.Tests\OqtaneTemplateGenerator.Tests.csproj", "{A505AE39-8747-A4AA-F34D-39D076B13567}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cre8magicTransformer.Tests", "Cre8magicTransformer.Tests\Cre8magicTransformer.Tests.csproj", "{A505AE39-8747-A4AA-F34D-39D076B13567}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Cre8magicTransformer.App\cre8magic-transformer.config.json = Cre8magicTransformer.App\cre8magic-transformer.config.json
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
-		OqtaneTemplateGenerator.App\template-generator.config.json = OqtaneTemplateGenerator.App\template-generator.config.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{66A21EB8-5D93-77DD-6F45-7C4D31112FAB}"
-	ProjectSection(SolutionItems) = preProject
-		publish\OqtaneTemplateGenerator.exe = publish\OqtaneTemplateGenerator.exe
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{549B9CE9-6F60-CA36-A749-84BB87DB53D3}"
 	ProjectSection(SolutionItems) = preProject

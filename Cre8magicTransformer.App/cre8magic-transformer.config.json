@@ -1,4 +1,4 @@
-{
+﻿{
   // The path where generated templates will be placed
   "destinationPath": "..\\..\\..\\..\\Tests\\2Templates\\cre8magic",
 
@@ -18,7 +18,7 @@
         "Package/",
         ".gitignore",
         "**/*.DotSettings",
-        "template-generator.config.json"
+        "cre8magic-transformer.config.json"
       ]
     },
     {

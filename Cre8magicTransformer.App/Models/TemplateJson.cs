@@ -1,5 +1,5 @@
-// ReSharper disable CheckNamespace
-namespace ToSic.Cre8magic.Oqtane.TemplateGenerator.Models; 
+﻿// ReSharper disable CheckNamespace
+namespace ToSic.Cre8magic.Oqtane.Transformer.Models; 
 
 public class TemplateJson
 {

@@ -1,1 +1,1 @@
-"..\publish\OqtaneTemplateGenerator.exe" --config "template-generator-test4.config.json"
+"..\publish\cre8magicTransformer.exe" --config "template-generator-test4.config.json"

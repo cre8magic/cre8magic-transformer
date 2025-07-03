@@ -1,9 +1,5 @@
-{
+﻿{
   "profiles": {
-    "WSL": {
-      "commandName": "WSL2",
-      "distributionName": ""
-    },
     "CLI": {
       "commandName": "Project",
       "commandLineArgs": "--source \"..\\..\\..\\..\\Tests\\1Themes\\oqtane-theme-basic\" --destination \"..\\..\\..\\..\\Tests\\2Templates\\cre8magic\"",
