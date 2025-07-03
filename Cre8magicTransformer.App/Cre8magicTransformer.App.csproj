@@ -11,7 +11,7 @@
     <Company>2sic internet solutions GmbH, Switzerland</Company>
     <CopyRight>Copyright MIT © 2sic 2025</CopyRight>
     <Title>cre8magicTransformer</Title>
-    <Description>Oqatne template generator</Description>
+    <Description>Oqtane Template / Module generator and Template to Theme / Module converter</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishDir>publish</PublishDir>
     <LangVersion>preview</LangVersion>
