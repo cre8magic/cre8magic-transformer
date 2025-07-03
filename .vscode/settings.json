@@ -1,5 +1,11 @@
 {
     "cSpell.words": [
         "Oqtane"
-    ]
+    ],
+    "workbench.editor.customLabels.patterns": {
+        "*.json": "jsonc"
+    },
+    "files.associations": {
+        "*.json": "jsonc"
+    }
 }
