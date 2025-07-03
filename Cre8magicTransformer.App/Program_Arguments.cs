@@ -64,6 +64,7 @@ public partial class Program
         Console.WriteLine("================================");
         Console.WriteLine($" {name} v{version}");
         Console.WriteLine("================================");
+        Console.WriteLine("\nDocumentation https://go.cre8magic.org/tf");
     }
 
     /// <summary>
