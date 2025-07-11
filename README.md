@@ -49,16 +49,20 @@ You can now run it directly without requiring .NET to be pre-installed.
 ## 🔧 How to Publish as a Self-Contained EXE from Terminal
 
 1. **Open a terminal** in the project root directory (where `Cre8magicTransformer.App.csproj` is located).
+
    `cd Cre8magicTransformer.App`
 
 1. **Run the following command:**
-   `dotnet publish -c Release`   This uses the settings in the project file to produce a self-contained, single-file executable for Windows x64.
+
+   `dotnet publish`   This uses the settings in the project file to produce a self-contained, single-file executable for Windows x64.
 
 1. **Find the output:**
+
    * The published files will be in the `publish` folder (as set in the project file) in root solution folder.
    * Look for `cre8magicTransformer.exe` in `/publish/`.
 
 1. **Run the app:**
+
    * Run `cre8magicTransformer.exe` from the command line.
 
 ![Run `cre8magicTransformer.exe` from the command line.](./Cre8magicTransformer.App/assets/cmd.png)
