@@ -1,1 +1,0 @@
-"..\publish\cre8magicTransformer.exe" --config "template-generator-test3.config.json" --source "1Themes\oqtane-theme-basic"
