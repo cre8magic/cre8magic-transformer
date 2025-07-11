@@ -1,7 +1,7 @@
 ﻿
-# cre8magic ♾️ Transformer 
+# cre8magic ♾️ Transformer
 
-<img src="./OqtaneTemplateGenerator.App/assets/logo-400.png" alt="Oqtane Template Generator logo" width="200" align="right"/>
+<img src="./Cre8magicTransformer.App/assets/logo-400.png" alt="cre8magic ♾️ Transformer logo" width="200" align="right"/>
 
 > Oqtane Template / Module generator
 > and Template to Theme / Module converter
